@@ -1,5 +1,4 @@
 from tkinter import *  # the GUI package
-from buttons import *  # from our buttons.py file
 
 # set up a display window
 window = Tk()
@@ -44,13 +43,13 @@ class Buttons:
 
     # create all the buttons on screen
     def create_buttons(self):
-        for char in '1234567890+-*/=c.':
+        for char in '1234567890+-*/=c.()':
             self.buttons.append(self.create_button(char))
         self.display_layout()
 
     def display_layout(self):
-        layout_row = [2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 2, 3, 4, 5, 5, 5, 6]
-        layout_column = [0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 3, 3, 3, 3, 2, 1, 0]
+        layout_row = [2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 2, 3, 4, 5, 5, 5, 6, 6, 6]
+        layout_column = [0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 3, 3, 3, 3, 2, 1, 0, 1, 2]
         index = 0
         for button in self.buttons:
             button.grid(row=layout_row[index],
